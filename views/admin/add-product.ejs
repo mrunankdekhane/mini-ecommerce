@@ -1,0 +1,12 @@
+<%- include('../partials/header') %>
+
+<h2>Add Product</h2>
+
+<form action="/admin/add" method="POST">
+  <input name="name" placeholder="Name" required>
+  <input name="price" placeholder="Price" required>
+  <input name="description" placeholder="Description">
+  <button>Add</button>
+</form>
+
+<%- include('../partials/footer') %>

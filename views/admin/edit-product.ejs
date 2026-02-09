@@ -1,0 +1,12 @@
+<%- include('../partials/header') %>
+
+<h2>Edit Product</h2>
+
+<form action="/admin/edit/<%= product._id %>?_method=PUT" method="POST">
+  <input name="name" value="<%= product.name %>">
+  <input name="price" value="<%= product.price %>">
+  <input name="description" value="<%= product.description %>">
+  <button>Update</button>
+</form>
+
+<%- include('../partials/footer') %>

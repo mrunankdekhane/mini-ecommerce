@@ -1,0 +1,16 @@
+<%- include('../partials/header') %>
+
+<h2>Admin Dashboard</h2>
+<a href="/admin/add">Add Product</a>
+
+<% products.forEach(p => { %>
+  <div>
+    <h3><%= p.name %></h3>
+    <a href="/admin/edit/<%= p._id %>">Edit</a>
+    <form action="/admin/delete/<%= p._id %>?_method=DELETE" method="POST">
+      <button>Delete</button>
+    </form>
+  </div>
+<% }) %>
+
+<%- include('../partials/footer') %>
