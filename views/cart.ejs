@@ -1,0 +1,20 @@
+<%- include('partials/header') %>
+
+<h2>Your Cart</h2>
+
+<% if(cart.length === 0){ %>
+  <p>Cart is empty</p>
+<% } %>
+
+<% cart.forEach(item => { %>
+  <div>
+    <h3><%= item.product.name %></h3>
+    <p>Qty: <%= item.quantity %></p>
+  </div>
+<% }) %>
+
+<form action="/orders/place" method="POST">
+  <button>Place Order</button>
+</form>
+
+<%- include('partials/footer') %>
